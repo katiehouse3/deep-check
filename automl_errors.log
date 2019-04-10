@@ -1,0 +1,1006 @@
+2019-04-10 13:00:47,387 - INFO - 114 : Starting usage telemetry collection
+2019-04-10 13:00:47,546 - INFO - 763 : Start creating parent run with DTO:  - name: hatespeech_detection
+ - subscription_id: a989cac4-671d-45c6-9d2b-ea7e9d936600
+ - iterations: 10
+ - primary_metric: AUC_weighted
+ - compute_target: deepcheck
+ - task_type: classification
+ - validation_size: 0.0
+ - n_cross_validations: 3
+ - y_min: None
+ - y_max: None
+ - num_classes: None
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: False
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: 10
+ - mem_in_mb: None
+ - enforce_time_on_windows: True
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoost', 'XGBoostClassifier']
+ - auto_blacklist: True
+ - blacklist_samples_reached: False
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: True
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: maximize.
+2019-04-10 13:00:49,194 - INFO - 776 : [ParentRunID:AutoML_c4e11dd0-cf4c-4dd0-9fb6-64931fa5dd88] Remote run using user script.
+2019-04-10 13:00:49,788 - INFO - 65 : [RunId:AutoML_c4e11dd0-cf4c-4dd0-9fb6-64931fa5dd88]SDK dependencies versions:{"azureml-widgets": "1.0.17", "azureml-train": "1.0.17", "azureml-train-restclients-hyperdrive": "1.0.17", "azureml-train-core": "1.0.17", "azureml-train-automl": "1.0.17.1", "azureml-telemetry": "1.0.17", "azureml-sdk": "1.0.17", "azureml-pipeline": "1.0.17", "azureml-pipeline-steps": "1.0.17", "azureml-pipeline-core": "1.0.17", "azureml-dataprep": "1.0.16", "azureml-dataprep-native": "11.2.2", "azureml-core": "1.0.17.1", "azureml-contrib-notebook": "1.0.17"}.
+2019-04-10 13:00:50,273 - INFO - 787 : Parent Run ID: AutoML_c4e11dd0-cf4c-4dd0-9fb6-64931fa5dd88
+2019-04-10 13:00:52,274 - INFO - 793 : Snapshotted folder: ./hatespeech_project with snapshot_id: 34277a0e-f31f-4e1a-837b-17c83f5b05cc
+2019-04-10 13:00:52,274 - INFO - 807 : Starting a snapshot run (snapshotId : 34277a0e-f31f-4e1a-837b-17c83f5b05cc) with following compute definition: {'Configuration': {'script': 'train.py', 'arguments': [], 'target': 'deepcheck', 'framework': 'python', 'communicator': 'None', 'autoPrepareEnvironment': True, 'maxRunDurationSeconds': None, 'nodeCount': 1, 'environment': {'environmentVariables': {'EXAMPLE_ENV_VAR': 'EXAMPLE_VALUE'}, 'python': {'userManagedDependencies': False, 'interpreterPath': 'python', 'condaDependencies': CommentedMap([('name', 'project_environment'), ('dependencies', ['python=3.6.2', CommentedMap([('pip', ['azureml-sdk[automl]==1.0.17'])]), 'numpy', 'py-xgboost<=0.80'])])}, 'docker': {'enabled': True, 'baseImage': 'mcr.microsoft.com/azureml/base:0.2.2', 'sharedVolumes': True, 'gpuSupport': False, 'shmSize': '1g', 'arguments': [], 'baseImageRegistry': {'address': None, 'username': None, 'password': None}}, 'spark': {'repositories': ['https://mmlspark.azureedge.net/maven'], 'packages': [{'group': 'com.microsoft.ml.spark', 'artifact': 'mmlspark_2.11', 'version': '0.12'}], 'precachePackages': True}, 'databricks': {'mavenLibraries': [], 'pypiLibraries': [], 'rcranLibraries': [], 'jarLibraries': [], 'eggLibraries': []}}, 'history': {'outputCollection': True, 'snapshotProject': True}, 'spark': {'configuration': {'spark.app.name': 'Azure ML Experiment', 'spark.yarn.maxAppAttempts': 1}}, 'hdi': {'yarnDeployMode': 'cluster'}, 'tensorflow': {'workerCount': 1, 'parameterServerCount': 1}, 'mpi': {'processCountPerNode': 1}, 'dataReferences': {'workspaceblobstore': {'dataStoreName': 'workspaceblobstore', 'pathOnDataStore': 'hatespeech_data', 'mode': 'download', 'overwrite': False, 'pathOnCompute': '/tmp/azureml_runs'}}, 'sourceDirectoryDataStore': None, 'amlcompute': {'vmSize': None, 'vmPriority': None, 'retainCluster': False, 'name': None, 'clusterMaxNodeCount': 1}}}
+2019-04-10 13:00:57,416 - INFO - 64 : memory usage 586842112
+2019-04-10 13:00:57,416 - INFO - 64 : child memory usage 586846208
+2019-04-10 13:00:57,480 - INFO - 73 : cpu time 351.703125
+2019-04-10 13:00:57,519 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:01:07,548 - INFO - 64 : memory usage 587390976
+2019-04-10 13:01:07,548 - INFO - 64 : child memory usage 587395072
+2019-04-10 13:01:07,601 - INFO - 73 : cpu time 352.375
+2019-04-10 13:01:07,665 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:01:17,704 - INFO - 64 : memory usage 587395072
+2019-04-10 13:01:17,704 - INFO - 64 : child memory usage 587395072
+2019-04-10 13:01:17,773 - INFO - 73 : cpu time 352.6875
+2019-04-10 13:01:17,820 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:01:27,848 - INFO - 64 : memory usage 587706368
+2019-04-10 13:01:27,856 - INFO - 64 : child memory usage 587706368
+2019-04-10 13:01:27,860 - INFO - 73 : cpu time 352.9375
+2019-04-10 13:01:27,973 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:01:38,028 - INFO - 64 : memory usage 587837440
+2019-04-10 13:01:38,028 - INFO - 64 : child memory usage 587841536
+2019-04-10 13:01:38,097 - INFO - 73 : cpu time 353.421875
+2019-04-10 13:01:38,160 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:01:48,186 - INFO - 64 : memory usage 587960320
+2019-04-10 13:01:48,202 - INFO - 64 : child memory usage 587964416
+2019-04-10 13:01:48,217 - INFO - 73 : cpu time 353.859375
+2019-04-10 13:01:48,365 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:01:58,379 - INFO - 64 : memory usage 588353536
+2019-04-10 13:01:58,379 - INFO - 64 : child memory usage 588357632
+2019-04-10 13:01:58,379 - INFO - 73 : cpu time 354.203125
+2019-04-10 13:01:58,419 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:02:08,482 - INFO - 64 : memory usage 588468224
+2019-04-10 13:02:08,482 - INFO - 64 : child memory usage 588468224
+2019-04-10 13:02:08,506 - INFO - 73 : cpu time 354.546875
+2019-04-10 13:02:08,506 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:02:18,516 - INFO - 64 : memory usage 588480512
+2019-04-10 13:02:18,524 - INFO - 64 : child memory usage 588488704
+2019-04-10 13:02:18,596 - INFO - 73 : cpu time 354.84375
+2019-04-10 13:02:18,596 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:02:28,621 - INFO - 64 : memory usage 588587008
+2019-04-10 13:02:28,629 - INFO - 64 : child memory usage 588591104
+2019-04-10 13:02:28,700 - INFO - 73 : cpu time 355.3125
+2019-04-10 13:02:28,700 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:02:38,776 - INFO - 64 : memory usage 588533760
+2019-04-10 13:02:38,776 - INFO - 64 : child memory usage 588537856
+2019-04-10 13:02:38,776 - INFO - 73 : cpu time 355.953125
+2019-04-10 13:02:38,854 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:02:48,862 - INFO - 64 : memory usage 588640256
+2019-04-10 13:02:48,862 - INFO - 64 : child memory usage 588640256
+2019-04-10 13:02:48,878 - INFO - 73 : cpu time 356.40625
+2019-04-10 13:02:48,898 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:02:58,915 - INFO - 64 : memory usage 588615680
+2019-04-10 13:02:58,915 - INFO - 64 : child memory usage 588619776
+2019-04-10 13:02:58,978 - INFO - 73 : cpu time 356.75
+2019-04-10 13:02:59,053 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:03:09,081 - INFO - 64 : memory usage 588685312
+2019-04-10 13:03:09,081 - INFO - 64 : child memory usage 588685312
+2019-04-10 13:03:09,150 - INFO - 73 : cpu time 357.28125
+2019-04-10 13:03:09,197 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:03:19,223 - INFO - 64 : memory usage 588918784
+2019-04-10 13:03:19,223 - INFO - 64 : child memory usage 588922880
+2019-04-10 13:03:19,308 - INFO - 73 : cpu time 357.4375
+2019-04-10 13:03:19,339 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:03:29,361 - INFO - 64 : memory usage 589352960
+2019-04-10 13:03:29,361 - INFO - 64 : child memory usage 589352960
+2019-04-10 13:03:29,361 - INFO - 73 : cpu time 357.8125
+2019-04-10 13:03:29,361 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:03:39,361 - INFO - 64 : memory usage 589418496
+2019-04-10 13:03:39,370 - INFO - 64 : child memory usage 589422592
+2019-04-10 13:03:39,370 - INFO - 73 : cpu time 358.109375
+2019-04-10 13:03:39,456 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:03:49,466 - INFO - 64 : memory usage 589455360
+2019-04-10 13:03:49,466 - INFO - 64 : child memory usage 589455360
+2019-04-10 13:03:49,466 - INFO - 73 : cpu time 358.65625
+2019-04-10 13:03:49,497 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:03:59,524 - INFO - 64 : memory usage 589582336
+2019-04-10 13:03:59,524 - INFO - 64 : child memory usage 589586432
+2019-04-10 13:03:59,586 - INFO - 73 : cpu time 359.125
+2019-04-10 13:03:59,624 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:04:09,629 - INFO - 64 : memory usage 589586432
+2019-04-10 13:04:09,629 - INFO - 64 : child memory usage 589590528
+2019-04-10 13:04:09,629 - INFO - 73 : cpu time 359.46875
+2019-04-10 13:04:09,676 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:04:19,684 - INFO - 64 : memory usage 589651968
+2019-04-10 13:04:19,688 - INFO - 64 : child memory usage 589656064
+2019-04-10 13:04:19,744 - INFO - 73 : cpu time 359.71875
+2019-04-10 13:04:19,808 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:04:29,839 - INFO - 64 : memory usage 589647872
+2019-04-10 13:04:29,843 - INFO - 64 : child memory usage 589647872
+2019-04-10 13:04:29,843 - INFO - 73 : cpu time 359.875
+2019-04-10 13:04:29,843 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:04:39,880 - INFO - 64 : memory usage 589631488
+2019-04-10 13:04:39,888 - INFO - 64 : child memory usage 589635584
+2019-04-10 13:04:39,964 - INFO - 73 : cpu time 360.21875
+2019-04-10 13:04:40,060 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:04:50,097 - INFO - 64 : memory usage 582901760
+2019-04-10 13:04:50,125 - INFO - 64 : child memory usage 582901760
+2019-04-10 13:04:50,125 - INFO - 73 : cpu time 360.640625
+2019-04-10 13:04:50,129 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:05:00,203 - INFO - 64 : memory usage 583442432
+2019-04-10 13:05:00,207 - INFO - 64 : child memory usage 583446528
+2019-04-10 13:05:00,259 - INFO - 73 : cpu time 361.109375
+2019-04-10 13:05:00,295 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:05:10,300 - INFO - 64 : memory usage 583499776
+2019-04-10 13:05:10,300 - INFO - 64 : child memory usage 583503872
+2019-04-10 13:05:10,328 - INFO - 73 : cpu time 361.609375
+2019-04-10 13:05:10,360 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:05:20,365 - INFO - 64 : memory usage 583503872
+2019-04-10 13:05:20,365 - INFO - 64 : child memory usage 583503872
+2019-04-10 13:05:20,389 - INFO - 73 : cpu time 362.234375
+2019-04-10 13:05:20,421 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:05:30,432 - INFO - 64 : memory usage 583528448
+2019-04-10 13:05:30,432 - INFO - 64 : child memory usage 583532544
+2019-04-10 13:05:30,464 - INFO - 73 : cpu time 362.65625
+2019-04-10 13:05:30,512 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:05:40,520 - INFO - 64 : memory usage 583282688
+2019-04-10 13:05:40,520 - INFO - 64 : child memory usage 583286784
+2019-04-10 13:05:40,573 - INFO - 73 : cpu time 362.890625
+2019-04-10 13:05:40,662 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:05:50,692 - INFO - 64 : memory usage 583254016
+2019-04-10 13:05:50,692 - INFO - 64 : child memory usage 583254016
+2019-04-10 13:05:50,736 - INFO - 73 : cpu time 363.234375
+2019-04-10 13:05:50,751 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:06:00,767 - INFO - 64 : memory usage 583335936
+2019-04-10 13:06:00,767 - INFO - 64 : child memory usage 583340032
+2019-04-10 13:06:00,792 - INFO - 73 : cpu time 363.5625
+2019-04-10 13:06:00,837 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:06:10,838 - INFO - 64 : memory usage 583274496
+2019-04-10 13:06:10,842 - INFO - 64 : child memory usage 583274496
+2019-04-10 13:06:10,906 - INFO - 73 : cpu time 363.9375
+2019-04-10 13:06:10,922 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:06:20,929 - INFO - 64 : memory usage 583245824
+2019-04-10 13:06:20,929 - INFO - 64 : child memory usage 583245824
+2019-04-10 13:06:20,949 - INFO - 73 : cpu time 364.5625
+2019-04-10 13:06:20,963 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:06:30,969 - INFO - 64 : memory usage 583352320
+2019-04-10 13:06:30,969 - INFO - 64 : child memory usage 583360512
+2019-04-10 13:06:30,985 - INFO - 73 : cpu time 365.0625
+2019-04-10 13:06:30,985 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:06:41,013 - INFO - 64 : memory usage 583356416
+2019-04-10 13:06:41,013 - INFO - 64 : child memory usage 583360512
+2019-04-10 13:06:41,074 - INFO - 73 : cpu time 365.421875
+2019-04-10 13:06:41,129 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:06:51,161 - INFO - 64 : memory usage 583303168
+2019-04-10 13:06:51,161 - INFO - 64 : child memory usage 583303168
+2019-04-10 13:06:51,161 - INFO - 73 : cpu time 365.671875
+2019-04-10 13:06:51,161 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:07:01,192 - INFO - 64 : memory usage 583286784
+2019-04-10 13:07:01,192 - INFO - 64 : child memory usage 583286784
+2019-04-10 13:07:01,208 - INFO - 73 : cpu time 366.0
+2019-04-10 13:07:01,255 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:07:11,258 - INFO - 64 : memory usage 583221248
+2019-04-10 13:07:11,258 - INFO - 64 : child memory usage 583221248
+2019-04-10 13:07:11,258 - INFO - 73 : cpu time 366.40625
+2019-04-10 13:07:11,258 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:07:21,269 - INFO - 64 : memory usage 583258112
+2019-04-10 13:07:21,269 - INFO - 64 : child memory usage 583258112
+2019-04-10 13:07:21,284 - INFO - 73 : cpu time 366.75
+2019-04-10 13:07:21,306 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:07:31,306 - INFO - 64 : memory usage 583249920
+2019-04-10 13:07:31,310 - INFO - 64 : child memory usage 583254016
+2019-04-10 13:07:31,310 - INFO - 73 : cpu time 367.015625
+2019-04-10 13:07:31,310 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:07:41,344 - INFO - 64 : memory usage 583188480
+2019-04-10 13:07:41,344 - INFO - 64 : child memory usage 583192576
+2019-04-10 13:07:41,344 - INFO - 73 : cpu time 367.1875
+2019-04-10 13:07:41,344 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:07:51,377 - INFO - 64 : memory usage 583258112
+2019-04-10 13:07:51,377 - INFO - 64 : child memory usage 583262208
+2019-04-10 13:07:51,423 - INFO - 73 : cpu time 367.4375
+2019-04-10 13:07:51,472 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:08:01,503 - INFO - 64 : memory usage 583311360
+2019-04-10 13:08:01,503 - INFO - 64 : child memory usage 583315456
+2019-04-10 13:08:01,545 - INFO - 73 : cpu time 368.015625
+2019-04-10 13:08:01,545 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:08:11,563 - INFO - 64 : memory usage 583315456
+2019-04-10 13:08:11,571 - INFO - 64 : child memory usage 583315456
+2019-04-10 13:08:11,651 - INFO - 73 : cpu time 368.390625
+2019-04-10 13:08:11,655 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:08:21,688 - INFO - 64 : memory usage 583352320
+2019-04-10 13:08:21,688 - INFO - 64 : child memory usage 583356416
+2019-04-10 13:08:21,741 - INFO - 73 : cpu time 368.890625
+2019-04-10 13:08:21,772 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:08:31,776 - INFO - 64 : memory usage 583327744
+2019-04-10 13:08:31,776 - INFO - 64 : child memory usage 583331840
+2019-04-10 13:08:31,804 - INFO - 73 : cpu time 369.3125
+2019-04-10 13:08:31,844 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:08:41,847 - INFO - 64 : memory usage 583294976
+2019-04-10 13:08:41,847 - INFO - 64 : child memory usage 583294976
+2019-04-10 13:08:41,851 - INFO - 73 : cpu time 369.46875
+2019-04-10 13:08:41,871 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:08:51,923 - INFO - 64 : memory usage 583245824
+2019-04-10 13:08:51,923 - INFO - 64 : child memory usage 583249920
+2019-04-10 13:08:51,943 - INFO - 73 : cpu time 369.578125
+2019-04-10 13:08:51,943 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:09:01,981 - INFO - 64 : memory usage 583225344
+2019-04-10 13:09:01,981 - INFO - 64 : child memory usage 583229440
+2019-04-10 13:09:02,027 - INFO - 73 : cpu time 369.921875
+2019-04-10 13:09:02,065 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:09:12,073 - INFO - 64 : memory usage 583593984
+2019-04-10 13:09:12,073 - INFO - 64 : child memory usage 583598080
+2019-04-10 13:09:12,126 - INFO - 73 : cpu time 370.390625
+2019-04-10 13:09:12,204 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:09:22,233 - INFO - 64 : memory usage 583585792
+2019-04-10 13:09:22,240 - INFO - 64 : child memory usage 583585792
+2019-04-10 13:09:22,240 - INFO - 73 : cpu time 371.078125
+2019-04-10 13:09:22,364 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:09:32,406 - INFO - 64 : memory usage 583581696
+2019-04-10 13:09:32,406 - INFO - 64 : child memory usage 583585792
+2019-04-10 13:09:32,459 - INFO - 73 : cpu time 371.40625
+2019-04-10 13:09:32,521 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:09:42,533 - INFO - 64 : memory usage 583585792
+2019-04-10 13:09:42,533 - INFO - 64 : child memory usage 583589888
+2019-04-10 13:09:42,601 - INFO - 73 : cpu time 371.921875
+2019-04-10 13:09:42,617 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:09:52,644 - INFO - 64 : memory usage 548089856
+2019-04-10 13:09:52,652 - INFO - 64 : child memory usage 548089856
+2019-04-10 13:09:52,656 - INFO - 73 : cpu time 372.125
+2019-04-10 13:09:52,745 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:10:02,798 - INFO - 64 : memory usage 548081664
+2019-04-10 13:10:02,798 - INFO - 64 : child memory usage 548081664
+2019-04-10 13:10:02,860 - INFO - 73 : cpu time 372.421875
+2019-04-10 13:10:02,914 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:10:12,962 - INFO - 64 : memory usage 548081664
+2019-04-10 13:10:12,962 - INFO - 64 : child memory usage 548085760
+2019-04-10 13:10:13,025 - INFO - 73 : cpu time 372.890625
+2019-04-10 13:10:13,064 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:10:23,119 - INFO - 64 : memory usage 548085760
+2019-04-10 13:10:23,119 - INFO - 64 : child memory usage 548085760
+2019-04-10 13:10:23,166 - INFO - 73 : cpu time 373.46875
+2019-04-10 13:10:23,219 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:10:33,241 - INFO - 64 : memory usage 548081664
+2019-04-10 13:10:33,247 - INFO - 64 : child memory usage 548085760
+2019-04-10 13:10:33,294 - INFO - 73 : cpu time 373.984375
+2019-04-10 13:10:33,340 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:10:43,367 - INFO - 64 : memory usage 548077568
+2019-04-10 13:10:43,367 - INFO - 64 : child memory usage 548081664
+2019-04-10 13:10:43,387 - INFO - 73 : cpu time 374.28125
+2019-04-10 13:10:43,400 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:10:53,421 - INFO - 64 : memory usage 548077568
+2019-04-10 13:10:53,421 - INFO - 64 : child memory usage 548077568
+2019-04-10 13:10:53,496 - INFO - 73 : cpu time 374.5625
+2019-04-10 13:10:53,537 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:11:03,569 - INFO - 64 : memory usage 548061184
+2019-04-10 13:11:03,569 - INFO - 64 : child memory usage 548061184
+2019-04-10 13:11:03,569 - INFO - 73 : cpu time 374.921875
+2019-04-10 13:11:03,669 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:11:13,686 - INFO - 64 : memory usage 548069376
+2019-04-10 13:11:13,686 - INFO - 64 : child memory usage 548077568
+2019-04-10 13:11:13,710 - INFO - 73 : cpu time 375.359375
+2019-04-10 13:11:13,720 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:11:23,735 - INFO - 64 : memory usage 548040704
+2019-04-10 13:11:23,738 - INFO - 64 : child memory usage 548044800
+2019-04-10 13:11:23,896 - INFO - 73 : cpu time 375.578125
+2019-04-10 13:11:23,940 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:11:33,950 - INFO - 64 : memory usage 547971072
+2019-04-10 13:11:33,950 - INFO - 64 : child memory usage 547975168
+2019-04-10 13:11:34,019 - INFO - 73 : cpu time 375.90625
+2019-04-10 13:11:34,082 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:11:44,102 - INFO - 64 : memory usage 547975168
+2019-04-10 13:11:44,102 - INFO - 64 : child memory usage 547979264
+2019-04-10 13:11:44,155 - INFO - 73 : cpu time 376.4375
+2019-04-10 13:11:44,202 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:11:54,258 - INFO - 64 : memory usage 547921920
+2019-04-10 13:11:54,258 - INFO - 64 : child memory usage 547926016
+2019-04-10 13:11:54,262 - INFO - 73 : cpu time 376.9375
+2019-04-10 13:11:54,294 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:12:04,443 - INFO - 64 : memory usage 547893248
+2019-04-10 13:12:04,447 - INFO - 64 : child memory usage 547893248
+2019-04-10 13:12:04,467 - INFO - 73 : cpu time 377.109375
+2019-04-10 13:12:04,480 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:12:14,482 - INFO - 64 : memory usage 548245504
+2019-04-10 13:12:14,482 - INFO - 64 : child memory usage 548249600
+2019-04-10 13:12:14,529 - INFO - 73 : cpu time 378.0
+2019-04-10 13:12:14,529 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:12:24,547 - INFO - 64 : memory usage 548216832
+2019-04-10 13:12:24,571 - INFO - 64 : child memory usage 548216832
+2019-04-10 13:12:24,575 - INFO - 73 : cpu time 378.40625
+2019-04-10 13:12:24,575 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:12:34,612 - INFO - 64 : memory usage 548208640
+2019-04-10 13:12:34,612 - INFO - 64 : child memory usage 548208640
+2019-04-10 13:12:34,680 - INFO - 73 : cpu time 378.734375
+2019-04-10 13:12:34,727 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:12:44,744 - INFO - 64 : memory usage 548208640
+2019-04-10 13:12:44,744 - INFO - 64 : child memory usage 548208640
+2019-04-10 13:12:44,807 - INFO - 73 : cpu time 379.109375
+2019-04-10 13:12:44,860 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:12:54,872 - INFO - 64 : memory usage 548167680
+2019-04-10 13:12:54,872 - INFO - 64 : child memory usage 548171776
+2019-04-10 13:12:54,883 - INFO - 73 : cpu time 379.296875
+2019-04-10 13:12:54,898 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:13:04,916 - INFO - 64 : memory usage 548184064
+2019-04-10 13:13:04,916 - INFO - 64 : child memory usage 548184064
+2019-04-10 13:13:04,969 - INFO - 73 : cpu time 379.703125
+2019-04-10 13:13:05,016 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:13:15,052 - INFO - 64 : memory usage 548179968
+2019-04-10 13:13:15,060 - INFO - 64 : child memory usage 548179968
+2019-04-10 13:13:15,123 - INFO - 73 : cpu time 380.203125
+2019-04-10 13:13:15,123 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:13:25,152 - INFO - 64 : memory usage 548200448
+2019-04-10 13:13:25,152 - INFO - 64 : child memory usage 548204544
+2019-04-10 13:13:25,152 - INFO - 73 : cpu time 380.59375
+2019-04-10 13:13:25,152 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:13:35,153 - INFO - 64 : memory usage 548171776
+2019-04-10 13:13:35,161 - INFO - 64 : child memory usage 548171776
+2019-04-10 13:13:35,161 - INFO - 73 : cpu time 380.9375
+2019-04-10 13:13:35,283 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:13:45,314 - INFO - 64 : memory usage 548171776
+2019-04-10 13:13:45,321 - INFO - 64 : child memory usage 548175872
+2019-04-10 13:13:45,321 - INFO - 73 : cpu time 381.453125
+2019-04-10 13:13:45,438 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:13:55,457 - INFO - 64 : memory usage 548163584
+2019-04-10 13:13:55,465 - INFO - 64 : child memory usage 548167680
+2019-04-10 13:13:55,522 - INFO - 73 : cpu time 381.6875
+2019-04-10 13:13:55,569 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:14:05,624 - INFO - 64 : memory usage 548167680
+2019-04-10 13:14:05,624 - INFO - 64 : child memory usage 548167680
+2019-04-10 13:14:05,709 - INFO - 73 : cpu time 382.171875
+2019-04-10 13:14:05,789 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:14:15,792 - INFO - 64 : memory usage 548155392
+2019-04-10 13:14:15,800 - INFO - 64 : child memory usage 548159488
+2019-04-10 13:14:15,868 - INFO - 73 : cpu time 382.703125
+2019-04-10 13:14:15,872 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:14:25,894 - INFO - 64 : memory usage 548155392
+2019-04-10 13:14:25,894 - INFO - 64 : child memory usage 548159488
+2019-04-10 13:14:25,971 - INFO - 73 : cpu time 383.046875
+2019-04-10 13:14:25,986 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:14:36,007 - INFO - 64 : memory usage 548110336
+2019-04-10 13:14:36,007 - INFO - 64 : child memory usage 548114432
+2019-04-10 13:14:36,075 - INFO - 73 : cpu time 383.609375
+2019-04-10 13:14:36,107 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:14:46,125 - INFO - 64 : memory usage 539373568
+2019-04-10 13:14:46,133 - INFO - 64 : child memory usage 539377664
+2019-04-10 13:14:46,281 - INFO - 73 : cpu time 383.90625
+2019-04-10 13:14:46,281 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:14:56,288 - INFO - 64 : memory usage 539402240
+2019-04-10 13:14:56,304 - INFO - 64 : child memory usage 539402240
+2019-04-10 13:14:56,308 - INFO - 73 : cpu time 384.296875
+2019-04-10 13:14:56,424 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:15:06,450 - INFO - 64 : memory usage 539361280
+2019-04-10 13:15:06,462 - INFO - 64 : child memory usage 539365376
+2019-04-10 13:15:06,462 - INFO - 73 : cpu time 384.78125
+2019-04-10 13:15:06,462 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:15:16,555 - INFO - 64 : memory usage 539086848
+2019-04-10 13:15:16,555 - INFO - 64 : child memory usage 539086848
+2019-04-10 13:15:16,663 - INFO - 73 : cpu time 385.078125
+2019-04-10 13:15:16,743 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:15:26,749 - INFO - 64 : memory usage 539299840
+2019-04-10 13:15:26,749 - INFO - 64 : child memory usage 539303936
+2019-04-10 13:15:26,849 - INFO - 73 : cpu time 385.453125
+2019-04-10 13:15:26,896 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:15:36,898 - INFO - 64 : memory usage 539275264
+2019-04-10 13:15:36,906 - INFO - 64 : child memory usage 539279360
+2019-04-10 13:15:36,910 - INFO - 73 : cpu time 385.828125
+2019-04-10 13:15:36,950 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:15:46,976 - INFO - 64 : memory usage 539250688
+2019-04-10 13:15:46,980 - INFO - 64 : child memory usage 539250688
+2019-04-10 13:15:46,980 - INFO - 73 : cpu time 386.203125
+2019-04-10 13:15:47,020 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:15:57,024 - INFO - 64 : memory usage 539254784
+2019-04-10 13:15:57,032 - INFO - 64 : child memory usage 539258880
+2019-04-10 13:15:57,076 - INFO - 73 : cpu time 386.53125
+2019-04-10 13:15:57,080 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:16:07,154 - INFO - 64 : memory usage 539238400
+2019-04-10 13:16:07,166 - INFO - 64 : child memory usage 539242496
+2019-04-10 13:16:07,254 - INFO - 73 : cpu time 386.859375
+2019-04-10 13:16:07,314 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:16:17,322 - INFO - 64 : memory usage 539205632
+2019-04-10 13:16:17,326 - INFO - 64 : child memory usage 539205632
+2019-04-10 13:16:17,326 - INFO - 73 : cpu time 387.375
+2019-04-10 13:16:17,326 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:16:27,382 - INFO - 64 : memory usage 539226112
+2019-04-10 13:16:27,402 - INFO - 64 : child memory usage 539226112
+2019-04-10 13:16:27,454 - INFO - 73 : cpu time 387.828125
+2019-04-10 13:16:27,502 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:16:37,510 - INFO - 64 : memory usage 539201536
+2019-04-10 13:16:37,514 - INFO - 64 : child memory usage 539201536
+2019-04-10 13:16:37,514 - INFO - 73 : cpu time 388.390625
+2019-04-10 13:16:37,574 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:16:47,581 - INFO - 64 : memory usage 539160576
+2019-04-10 13:16:47,581 - INFO - 64 : child memory usage 539160576
+2019-04-10 13:16:47,581 - INFO - 73 : cpu time 388.796875
+2019-04-10 13:16:47,617 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:16:57,626 - INFO - 64 : memory usage 539164672
+2019-04-10 13:16:57,626 - INFO - 64 : child memory usage 539164672
+2019-04-10 13:16:57,648 - INFO - 73 : cpu time 388.953125
+2019-04-10 13:16:57,679 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:17:07,694 - INFO - 64 : memory usage 539168768
+2019-04-10 13:17:07,700 - INFO - 64 : child memory usage 539172864
+2019-04-10 13:17:07,700 - INFO - 73 : cpu time 389.375
+2019-04-10 13:17:07,763 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:17:17,779 - INFO - 64 : memory usage 539176960
+2019-04-10 13:17:17,785 - INFO - 64 : child memory usage 539181056
+2019-04-10 13:17:17,850 - INFO - 73 : cpu time 389.671875
+2019-04-10 13:17:17,901 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:17:27,918 - INFO - 64 : memory usage 539172864
+2019-04-10 13:17:27,918 - INFO - 64 : child memory usage 539176960
+2019-04-10 13:17:27,934 - INFO - 73 : cpu time 390.140625
+2019-04-10 13:17:27,965 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:17:37,968 - INFO - 64 : memory usage 539164672
+2019-04-10 13:17:37,976 - INFO - 64 : child memory usage 539168768
+2019-04-10 13:17:38,099 - INFO - 73 : cpu time 390.890625
+2019-04-10 13:17:38,099 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:17:48,137 - INFO - 64 : memory usage 539144192
+2019-04-10 13:17:48,137 - INFO - 64 : child memory usage 539148288
+2019-04-10 13:17:48,215 - INFO - 73 : cpu time 391.484375
+2019-04-10 13:17:48,280 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:17:58,303 - INFO - 64 : memory usage 539156480
+2019-04-10 13:17:58,303 - INFO - 64 : child memory usage 539160576
+2019-04-10 13:17:58,366 - INFO - 73 : cpu time 391.71875
+2019-04-10 13:17:58,419 - INFO - 73 : child cpu time 0.015625
+2019-04-10 13:18:08,445 - INFO - 64 : memory usage 539152384
+2019-04-10 13:18:08,453 - INFO - 64 : child memory usage 539156480
+2019-04-10 13:18:08,513 - INFO - 73 : cpu time 392.21875
+2019-04-10 13:18:08,513 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:18:18,577 - INFO - 64 : memory usage 539160576
+2019-04-10 13:18:18,577 - INFO - 64 : child memory usage 539160576
+2019-04-10 13:18:18,597 - INFO - 73 : cpu time 392.703125
+2019-04-10 13:18:18,617 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:18:28,618 - INFO - 64 : memory usage 539156480
+2019-04-10 13:18:28,626 - INFO - 64 : child memory usage 539160576
+2019-04-10 13:18:28,626 - INFO - 73 : cpu time 393.203125
+2019-04-10 13:18:28,753 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:18:38,774 - INFO - 64 : memory usage 539160576
+2019-04-10 13:18:38,782 - INFO - 64 : child memory usage 539160576
+2019-04-10 13:18:38,842 - INFO - 73 : cpu time 393.53125
+2019-04-10 13:18:38,902 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:18:48,920 - INFO - 64 : memory usage 539156480
+2019-04-10 13:18:48,928 - INFO - 64 : child memory usage 539156480
+2019-04-10 13:18:48,932 - INFO - 73 : cpu time 394.03125
+2019-04-10 13:18:48,968 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:18:58,991 - INFO - 64 : memory usage 539160576
+2019-04-10 13:18:58,999 - INFO - 64 : child memory usage 539160576
+2019-04-10 13:18:59,071 - INFO - 73 : cpu time 394.359375
+2019-04-10 13:18:59,151 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:19:09,161 - INFO - 64 : memory usage 539111424
+2019-04-10 13:19:09,169 - INFO - 64 : child memory usage 539115520
+2019-04-10 13:19:09,305 - INFO - 73 : cpu time 394.875
+2019-04-10 13:19:09,337 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:19:19,354 - INFO - 64 : memory usage 539095040
+2019-04-10 13:19:19,374 - INFO - 64 : child memory usage 539099136
+2019-04-10 13:19:19,406 - INFO - 73 : cpu time 395.515625
+2019-04-10 13:19:19,426 - INFO - 73 : child cpu time 0.0
+2019-04-10 13:19:29,428 - INFO - 64 : memory usage 539099136
+2019-04-10 13:19:29,432 - INFO - 64 : child memory usage 539103232
+2019-04-10 13:19:29,504 - INFO - 73 : cpu time 396.125
+2019-04-10 13:19:29,504 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:25:13,502 - INFO - 114 : Starting usage telemetry collection
+2019-04-10 15:25:13,691 - INFO - 763 : Start creating parent run with DTO:  - name: hatespeech_detection
+ - subscription_id: a989cac4-671d-45c6-9d2b-ea7e9d936600
+ - iterations: 10
+ - primary_metric: AUC_weighted
+ - compute_target: deepcheck
+ - task_type: classification
+ - validation_size: 0.0
+ - n_cross_validations: 3
+ - y_min: None
+ - y_max: None
+ - num_classes: None
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: False
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: 10
+ - mem_in_mb: None
+ - enforce_time_on_windows: True
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoost', 'XGBoostClassifier']
+ - auto_blacklist: True
+ - blacklist_samples_reached: False
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: True
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: maximize.
+2019-04-10 15:25:14,812 - INFO - 776 : [ParentRunID:AutoML_c7056a49-84c9-4cb9-a1ff-44e2aed23d34] Remote run using user script.
+2019-04-10 15:25:15,175 - INFO - 65 : [RunId:AutoML_c7056a49-84c9-4cb9-a1ff-44e2aed23d34]SDK dependencies versions:{"azureml-widgets": "1.0.17", "azureml-train": "1.0.17", "azureml-train-restclients-hyperdrive": "1.0.17", "azureml-train-core": "1.0.17", "azureml-train-automl": "1.0.17.1", "azureml-telemetry": "1.0.17", "azureml-sdk": "1.0.17", "azureml-pipeline": "1.0.17", "azureml-pipeline-steps": "1.0.17", "azureml-pipeline-core": "1.0.17", "azureml-dataprep": "1.0.16", "azureml-dataprep-native": "11.2.2", "azureml-core": "1.0.17.1", "azureml-contrib-notebook": "1.0.17"}.
+2019-04-10 15:25:15,508 - INFO - 787 : Parent Run ID: AutoML_c7056a49-84c9-4cb9-a1ff-44e2aed23d34
+2019-04-10 15:25:16,580 - INFO - 793 : Snapshotted folder: ./hatespeech_project with snapshot_id: 5bff1ef8-dd26-4322-a906-514c45b5b83e
+2019-04-10 15:25:16,581 - INFO - 807 : Starting a snapshot run (snapshotId : 5bff1ef8-dd26-4322-a906-514c45b5b83e) with following compute definition: {'Configuration': {'script': 'train.py', 'arguments': [], 'target': 'deepcheck', 'framework': 'python', 'communicator': 'None', 'autoPrepareEnvironment': True, 'maxRunDurationSeconds': None, 'nodeCount': 1, 'environment': {'environmentVariables': {'EXAMPLE_ENV_VAR': 'EXAMPLE_VALUE'}, 'python': {'userManagedDependencies': False, 'interpreterPath': 'python', 'condaDependencies': CommentedMap([('name', 'project_environment'), ('dependencies', ['python=3.6.2', CommentedMap([('pip', ['azureml-sdk[automl]==1.0.17'])]), 'numpy', 'py-xgboost<=0.80'])])}, 'docker': {'enabled': True, 'baseImage': 'mcr.microsoft.com/azureml/base:0.2.2', 'sharedVolumes': True, 'gpuSupport': False, 'shmSize': '1g', 'arguments': [], 'baseImageRegistry': {'address': None, 'username': None, 'password': None}}, 'spark': {'repositories': ['https://mmlspark.azureedge.net/maven'], 'packages': [{'group': 'com.microsoft.ml.spark', 'artifact': 'mmlspark_2.11', 'version': '0.12'}], 'precachePackages': True}, 'databricks': {'mavenLibraries': [], 'pypiLibraries': [], 'rcranLibraries': [], 'jarLibraries': [], 'eggLibraries': []}}, 'history': {'outputCollection': True, 'snapshotProject': True}, 'spark': {'configuration': {'spark.app.name': 'Azure ML Experiment', 'spark.yarn.maxAppAttempts': 1}}, 'hdi': {'yarnDeployMode': 'cluster'}, 'tensorflow': {'workerCount': 1, 'parameterServerCount': 1}, 'mpi': {'processCountPerNode': 1}, 'dataReferences': {'workspaceblobstore': {'dataStoreName': 'workspaceblobstore', 'pathOnDataStore': 'hatespeech_data', 'mode': 'download', 'overwrite': False, 'pathOnCompute': '/tmp/azureml_runs'}}, 'sourceDirectoryDataStore': None, 'amlcompute': {'vmSize': None, 'vmPriority': None, 'retainCluster': False, 'name': None, 'clusterMaxNodeCount': 1}}}
+2019-04-10 15:25:23,517 - INFO - 64 : memory usage 797032448
+2019-04-10 15:25:23,522 - INFO - 64 : child memory usage 797032448
+2019-04-10 15:25:23,524 - INFO - 73 : cpu time 117.796875
+2019-04-10 15:25:23,569 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:25:33,646 - INFO - 64 : memory usage 797134848
+2019-04-10 15:25:33,650 - INFO - 64 : child memory usage 797134848
+2019-04-10 15:25:33,652 - INFO - 73 : cpu time 118.484375
+2019-04-10 15:25:33,731 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:25:43,767 - INFO - 64 : memory usage 797007872
+2019-04-10 15:25:43,776 - INFO - 64 : child memory usage 797011968
+2019-04-10 15:25:43,877 - INFO - 73 : cpu time 118.921875
+2019-04-10 15:25:43,972 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:25:53,989 - INFO - 64 : memory usage 796999680
+2019-04-10 15:25:54,000 - INFO - 64 : child memory usage 797003776
+2019-04-10 15:25:54,062 - INFO - 73 : cpu time 119.359375
+2019-04-10 15:25:54,070 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:26:04,072 - INFO - 64 : memory usage 797065216
+2019-04-10 15:26:04,075 - INFO - 64 : child memory usage 797065216
+2019-04-10 15:26:04,096 - INFO - 73 : cpu time 119.78125
+2019-04-10 15:26:04,115 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:26:14,134 - INFO - 64 : memory usage 797151232
+2019-04-10 15:26:14,139 - INFO - 64 : child memory usage 797151232
+2019-04-10 15:26:14,186 - INFO - 73 : cpu time 120.265625
+2019-04-10 15:26:14,277 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:26:24,284 - INFO - 64 : memory usage 797372416
+2019-04-10 15:26:24,291 - INFO - 64 : child memory usage 797372416
+2019-04-10 15:26:24,350 - INFO - 73 : cpu time 120.484375
+2019-04-10 15:26:24,373 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:26:34,393 - INFO - 64 : memory usage 797515776
+2019-04-10 15:26:34,397 - INFO - 64 : child memory usage 797515776
+2019-04-10 15:26:34,399 - INFO - 73 : cpu time 120.921875
+2019-04-10 15:26:34,464 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:26:44,500 - INFO - 64 : memory usage 797741056
+2019-04-10 15:26:44,505 - INFO - 64 : child memory usage 797741056
+2019-04-10 15:26:44,559 - INFO - 73 : cpu time 121.328125
+2019-04-10 15:26:44,634 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:26:54,653 - INFO - 64 : memory usage 797753344
+2019-04-10 15:26:54,655 - INFO - 64 : child memory usage 797757440
+2019-04-10 15:26:54,656 - INFO - 73 : cpu time 121.65625
+2019-04-10 15:26:54,685 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:27:04,696 - INFO - 64 : memory usage 797835264
+2019-04-10 15:27:04,705 - INFO - 64 : child memory usage 797839360
+2019-04-10 15:27:04,760 - INFO - 73 : cpu time 122.0625
+2019-04-10 15:27:04,800 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:27:14,803 - INFO - 64 : memory usage 797868032
+2019-04-10 15:27:14,810 - INFO - 64 : child memory usage 797868032
+2019-04-10 15:27:14,866 - INFO - 73 : cpu time 122.390625
+2019-04-10 15:27:14,923 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:27:24,959 - INFO - 64 : memory usage 797945856
+2019-04-10 15:27:24,963 - INFO - 64 : child memory usage 797949952
+2019-04-10 15:27:25,009 - INFO - 73 : cpu time 122.84375
+2019-04-10 15:27:25,061 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:27:35,109 - INFO - 64 : memory usage 797810688
+2019-04-10 15:27:35,123 - INFO - 64 : child memory usage 797814784
+2019-04-10 15:27:35,124 - INFO - 73 : cpu time 123.125
+2019-04-10 15:27:35,125 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:27:45,155 - INFO - 64 : memory usage 797900800
+2019-04-10 15:27:45,158 - INFO - 64 : child memory usage 797900800
+2019-04-10 15:27:45,160 - INFO - 73 : cpu time 123.359375
+2019-04-10 15:27:45,161 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:27:55,195 - INFO - 64 : memory usage 797913088
+2019-04-10 15:27:55,200 - INFO - 64 : child memory usage 797917184
+2019-04-10 15:27:55,245 - INFO - 73 : cpu time 123.59375
+2019-04-10 15:27:55,328 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:28:05,346 - INFO - 64 : memory usage 797921280
+2019-04-10 15:28:05,351 - INFO - 64 : child memory usage 797921280
+2019-04-10 15:28:05,395 - INFO - 73 : cpu time 123.859375
+2019-04-10 15:28:05,396 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:28:15,445 - INFO - 64 : memory usage 798130176
+2019-04-10 15:28:15,452 - INFO - 64 : child memory usage 798134272
+2019-04-10 15:28:15,500 - INFO - 73 : cpu time 124.359375
+2019-04-10 15:28:15,551 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:28:25,570 - INFO - 64 : memory usage 798507008
+2019-04-10 15:28:25,572 - INFO - 64 : child memory usage 798511104
+2019-04-10 15:28:25,586 - INFO - 73 : cpu time 124.609375
+2019-04-10 15:28:25,587 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:28:35,604 - INFO - 64 : memory usage 798597120
+2019-04-10 15:28:35,615 - INFO - 64 : child memory usage 798601216
+2019-04-10 15:28:35,685 - INFO - 73 : cpu time 125.015625
+2019-04-10 15:28:35,762 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:28:45,768 - INFO - 64 : memory usage 798613504
+2019-04-10 15:28:45,773 - INFO - 64 : child memory usage 798613504
+2019-04-10 15:28:45,849 - INFO - 73 : cpu time 125.5
+2019-04-10 15:28:45,932 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:28:55,946 - INFO - 64 : memory usage 798695424
+2019-04-10 15:28:55,953 - INFO - 64 : child memory usage 798699520
+2019-04-10 15:28:55,973 - INFO - 73 : cpu time 126.015625
+2019-04-10 15:28:55,973 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:29:05,995 - INFO - 64 : memory usage 798720000
+2019-04-10 15:29:06,001 - INFO - 64 : child memory usage 798720000
+2019-04-10 15:29:06,051 - INFO - 73 : cpu time 126.328125
+2019-04-10 15:29:06,124 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:29:16,140 - INFO - 64 : memory usage 798711808
+2019-04-10 15:29:16,147 - INFO - 64 : child memory usage 798715904
+2019-04-10 15:29:16,171 - INFO - 73 : cpu time 126.765625
+2019-04-10 15:29:16,171 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:29:26,188 - INFO - 64 : memory usage 798720000
+2019-04-10 15:29:26,194 - INFO - 64 : child memory usage 798720000
+2019-04-10 15:29:26,238 - INFO - 73 : cpu time 127.0625
+2019-04-10 15:29:26,304 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:29:36,310 - INFO - 64 : memory usage 798715904
+2019-04-10 15:29:36,317 - INFO - 64 : child memory usage 798720000
+2019-04-10 15:29:36,347 - INFO - 73 : cpu time 127.34375
+2019-04-10 15:29:36,348 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:29:46,367 - INFO - 64 : memory usage 798773248
+2019-04-10 15:29:46,372 - INFO - 64 : child memory usage 798777344
+2019-04-10 15:29:46,414 - INFO - 73 : cpu time 127.5625
+2019-04-10 15:29:46,469 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:29:56,482 - INFO - 64 : memory usage 798777344
+2019-04-10 15:29:56,488 - INFO - 64 : child memory usage 798781440
+2019-04-10 15:29:56,530 - INFO - 73 : cpu time 127.75
+2019-04-10 15:29:56,561 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:30:06,590 - INFO - 64 : memory usage 799154176
+2019-04-10 15:30:06,596 - INFO - 64 : child memory usage 799158272
+2019-04-10 15:30:06,598 - INFO - 73 : cpu time 128.109375
+2019-04-10 15:30:06,678 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:30:16,709 - INFO - 64 : memory usage 799158272
+2019-04-10 15:30:16,710 - INFO - 64 : child memory usage 799162368
+2019-04-10 15:30:16,711 - INFO - 73 : cpu time 128.5
+2019-04-10 15:30:16,746 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:30:26,752 - INFO - 64 : memory usage 799211520
+2019-04-10 15:30:26,758 - INFO - 64 : child memory usage 799211520
+2019-04-10 15:30:26,812 - INFO - 73 : cpu time 128.703125
+2019-04-10 15:30:26,885 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:30:36,908 - INFO - 64 : memory usage 799211520
+2019-04-10 15:30:36,913 - INFO - 64 : child memory usage 799215616
+2019-04-10 15:30:36,958 - INFO - 73 : cpu time 129.109375
+2019-04-10 15:30:37,003 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:30:47,017 - INFO - 64 : memory usage 799281152
+2019-04-10 15:30:47,019 - INFO - 64 : child memory usage 799285248
+2019-04-10 15:30:47,034 - INFO - 73 : cpu time 129.53125
+2019-04-10 15:30:47,056 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:30:57,059 - INFO - 64 : memory usage 799080448
+2019-04-10 15:30:57,065 - INFO - 64 : child memory usage 799080448
+2019-04-10 15:30:57,119 - INFO - 73 : cpu time 129.84375
+2019-04-10 15:30:57,197 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:31:07,204 - INFO - 64 : memory usage 799178752
+2019-04-10 15:31:07,211 - INFO - 64 : child memory usage 799182848
+2019-04-10 15:31:07,213 - INFO - 73 : cpu time 130.359375
+2019-04-10 15:31:07,316 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:31:17,380 - INFO - 64 : memory usage 799182848
+2019-04-10 15:31:17,382 - INFO - 64 : child memory usage 799186944
+2019-04-10 15:31:17,399 - INFO - 73 : cpu time 130.640625
+2019-04-10 15:31:17,432 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:31:27,434 - INFO - 64 : memory usage 799174656
+2019-04-10 15:31:27,440 - INFO - 64 : child memory usage 799178752
+2019-04-10 15:31:27,491 - INFO - 73 : cpu time 130.75
+2019-04-10 15:31:27,586 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:31:37,603 - INFO - 64 : memory usage 799236096
+2019-04-10 15:31:37,609 - INFO - 64 : child memory usage 799240192
+2019-04-10 15:31:37,660 - INFO - 73 : cpu time 131.265625
+2019-04-10 15:31:37,714 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:31:47,733 - INFO - 64 : memory usage 799219712
+2019-04-10 15:31:47,735 - INFO - 64 : child memory usage 799223808
+2019-04-10 15:31:47,751 - INFO - 73 : cpu time 131.671875
+2019-04-10 15:31:47,772 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:31:57,774 - INFO - 64 : memory usage 799723520
+2019-04-10 15:31:57,780 - INFO - 64 : child memory usage 799727616
+2019-04-10 15:31:57,826 - INFO - 73 : cpu time 132.015625
+2019-04-10 15:31:57,856 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:32:07,872 - INFO - 64 : memory usage 799809536
+2019-04-10 15:32:07,875 - INFO - 64 : child memory usage 799813632
+2019-04-10 15:32:07,876 - INFO - 73 : cpu time 132.53125
+2019-04-10 15:32:07,876 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:32:17,899 - INFO - 64 : memory usage 799805440
+2019-04-10 15:32:17,903 - INFO - 64 : child memory usage 799805440
+2019-04-10 15:32:17,946 - INFO - 73 : cpu time 132.921875
+2019-04-10 15:32:17,947 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:32:28,007 - INFO - 64 : memory usage 799883264
+2019-04-10 15:32:28,013 - INFO - 64 : child memory usage 799887360
+2019-04-10 15:32:28,057 - INFO - 73 : cpu time 133.296875
+2019-04-10 15:32:28,109 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:32:38,127 - INFO - 64 : memory usage 799879168
+2019-04-10 15:32:38,134 - INFO - 64 : child memory usage 799879168
+2019-04-10 15:32:38,193 - INFO - 73 : cpu time 133.6875
+2019-04-10 15:32:38,222 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:32:48,225 - INFO - 64 : memory usage 799825920
+2019-04-10 15:32:48,231 - INFO - 64 : child memory usage 799830016
+2019-04-10 15:32:48,277 - INFO - 73 : cpu time 133.9375
+2019-04-10 15:32:48,305 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:32:58,307 - INFO - 64 : memory usage 799784960
+2019-04-10 15:32:58,310 - INFO - 64 : child memory usage 799784960
+2019-04-10 15:32:58,332 - INFO - 73 : cpu time 134.125
+2019-04-10 15:32:58,332 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:33:08,347 - INFO - 64 : memory usage 799789056
+2019-04-10 15:33:08,353 - INFO - 64 : child memory usage 799793152
+2019-04-10 15:33:08,354 - INFO - 73 : cpu time 134.515625
+2019-04-10 15:33:08,408 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:33:18,441 - INFO - 64 : memory usage 799789056
+2019-04-10 15:33:18,446 - INFO - 64 : child memory usage 799793152
+2019-04-10 15:33:18,488 - INFO - 73 : cpu time 134.828125
+2019-04-10 15:33:18,569 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:33:28,572 - INFO - 64 : memory usage 799772672
+2019-04-10 15:33:28,578 - INFO - 64 : child memory usage 799776768
+2019-04-10 15:33:28,657 - INFO - 73 : cpu time 135.28125
+2019-04-10 15:33:28,658 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:33:38,661 - INFO - 64 : memory usage 799793152
+2019-04-10 15:33:38,669 - INFO - 64 : child memory usage 799793152
+2019-04-10 15:33:38,671 - INFO - 73 : cpu time 135.703125
+2019-04-10 15:33:38,779 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:33:48,795 - INFO - 64 : memory usage 799784960
+2019-04-10 15:33:48,801 - INFO - 64 : child memory usage 799784960
+2019-04-10 15:33:48,869 - INFO - 73 : cpu time 136.140625
+2019-04-10 15:33:48,924 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:33:58,941 - INFO - 64 : memory usage 799789056
+2019-04-10 15:33:58,946 - INFO - 64 : child memory usage 799789056
+2019-04-10 15:33:58,997 - INFO - 73 : cpu time 136.671875
+2019-04-10 15:33:59,054 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:34:09,072 - INFO - 64 : memory usage 799780864
+2019-04-10 15:34:09,077 - INFO - 64 : child memory usage 799784960
+2019-04-10 15:34:09,080 - INFO - 73 : cpu time 136.96875
+2019-04-10 15:34:09,198 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:34:19,216 - INFO - 64 : memory usage 799776768
+2019-04-10 15:34:19,224 - INFO - 64 : child memory usage 799780864
+2019-04-10 15:34:19,227 - INFO - 73 : cpu time 137.28125
+2019-04-10 15:34:19,346 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:34:29,358 - INFO - 64 : memory usage 799797248
+2019-04-10 15:34:29,364 - INFO - 64 : child memory usage 799797248
+2019-04-10 15:34:29,426 - INFO - 73 : cpu time 137.609375
+2019-04-10 15:34:29,484 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:34:39,503 - INFO - 64 : memory usage 800055296
+2019-04-10 15:34:39,510 - INFO - 64 : child memory usage 800055296
+2019-04-10 15:34:39,580 - INFO - 73 : cpu time 138.046875
+2019-04-10 15:34:39,719 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:34:49,724 - INFO - 64 : memory usage 800075776
+2019-04-10 15:34:49,725 - INFO - 64 : child memory usage 800075776
+2019-04-10 15:34:49,740 - INFO - 73 : cpu time 138.515625
+2019-04-10 15:34:49,740 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:34:59,755 - INFO - 64 : memory usage 800067584
+2019-04-10 15:34:59,760 - INFO - 64 : child memory usage 800071680
+2019-04-10 15:34:59,812 - INFO - 73 : cpu time 138.84375
+2019-04-10 15:34:59,880 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:35:09,901 - INFO - 64 : memory usage 800063488
+2019-04-10 15:35:09,907 - INFO - 64 : child memory usage 800067584
+2019-04-10 15:35:09,957 - INFO - 73 : cpu time 139.359375
+2019-04-10 15:35:10,032 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:35:20,039 - INFO - 64 : memory usage 800067584
+2019-04-10 15:35:20,043 - INFO - 64 : child memory usage 800067584
+2019-04-10 15:35:20,090 - INFO - 73 : cpu time 139.6875
+2019-04-10 15:35:20,091 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:35:30,097 - INFO - 64 : memory usage 800059392
+2019-04-10 15:35:30,104 - INFO - 64 : child memory usage 800063488
+2019-04-10 15:35:30,161 - INFO - 73 : cpu time 140.125
+2019-04-10 15:35:30,228 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:35:40,235 - INFO - 64 : memory usage 800059392
+2019-04-10 15:35:40,240 - INFO - 64 : child memory usage 800063488
+2019-04-10 15:35:40,290 - INFO - 73 : cpu time 140.515625
+2019-04-10 15:35:40,354 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:35:50,359 - INFO - 64 : memory usage 800055296
+2019-04-10 15:35:50,364 - INFO - 64 : child memory usage 800059392
+2019-04-10 15:35:50,367 - INFO - 73 : cpu time 140.84375
+2019-04-10 15:35:50,427 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:36:00,442 - INFO - 64 : memory usage 800055296
+2019-04-10 15:36:00,449 - INFO - 64 : child memory usage 800055296
+2019-04-10 15:36:00,509 - INFO - 73 : cpu time 141.15625
+2019-04-10 15:36:00,588 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:36:10,599 - INFO - 64 : memory usage 800043008
+2019-04-10 15:36:10,605 - INFO - 64 : child memory usage 800043008
+2019-04-10 15:36:10,623 - INFO - 73 : cpu time 141.59375
+2019-04-10 15:36:10,624 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:36:20,642 - INFO - 64 : memory usage 800047104
+2019-04-10 15:36:20,648 - INFO - 64 : child memory usage 800051200
+2019-04-10 15:36:20,651 - INFO - 73 : cpu time 141.984375
+2019-04-10 15:36:20,744 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:36:30,782 - INFO - 64 : memory usage 800014336
+2019-04-10 15:36:30,788 - INFO - 64 : child memory usage 800018432
+2019-04-10 15:36:30,839 - INFO - 73 : cpu time 142.390625
+2019-04-10 15:36:30,894 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:36:40,912 - INFO - 64 : memory usage 800002048
+2019-04-10 15:36:40,915 - INFO - 64 : child memory usage 800006144
+2019-04-10 15:36:40,917 - INFO - 73 : cpu time 142.75
+2019-04-10 15:36:40,938 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:36:50,974 - INFO - 64 : memory usage 799764480
+2019-04-10 15:36:50,996 - INFO - 64 : child memory usage 799768576
+2019-04-10 15:36:51,101 - INFO - 73 : cpu time 143.109375
+2019-04-10 15:36:51,102 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:37:01,172 - INFO - 64 : memory usage 799776768
+2019-04-10 15:37:01,175 - INFO - 64 : child memory usage 799776768
+2019-04-10 15:37:01,175 - INFO - 73 : cpu time 143.5
+2019-04-10 15:37:01,198 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:37:11,254 - INFO - 64 : memory usage 799772672
+2019-04-10 15:37:11,257 - INFO - 64 : child memory usage 799776768
+2019-04-10 15:37:11,276 - INFO - 73 : cpu time 143.9375
+2019-04-10 15:37:11,277 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:37:21,285 - INFO - 64 : memory usage 799772672
+2019-04-10 15:37:21,292 - INFO - 64 : child memory usage 799776768
+2019-04-10 15:37:21,321 - INFO - 73 : cpu time 144.125
+2019-04-10 15:37:21,322 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:37:31,383 - INFO - 64 : memory usage 799776768
+2019-04-10 15:37:31,392 - INFO - 64 : child memory usage 799780864
+2019-04-10 15:37:31,467 - INFO - 73 : cpu time 144.453125
+2019-04-10 15:37:31,499 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:37:41,501 - INFO - 64 : memory usage 799780864
+2019-04-10 15:37:41,507 - INFO - 64 : child memory usage 799784960
+2019-04-10 15:37:41,579 - INFO - 73 : cpu time 144.96875
+2019-04-10 15:37:41,621 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:37:51,626 - INFO - 64 : memory usage 799776768
+2019-04-10 15:37:51,643 - INFO - 64 : child memory usage 799780864
+2019-04-10 15:37:51,644 - INFO - 73 : cpu time 145.3125
+2019-04-10 15:37:51,645 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:38:01,746 - INFO - 64 : memory usage 799772672
+2019-04-10 15:38:01,749 - INFO - 64 : child memory usage 799776768
+2019-04-10 15:38:01,774 - INFO - 73 : cpu time 145.6875
+2019-04-10 15:38:01,803 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:38:11,806 - INFO - 64 : memory usage 799731712
+2019-04-10 15:38:11,809 - INFO - 64 : child memory usage 799731712
+2019-04-10 15:38:11,833 - INFO - 73 : cpu time 146.046875
+2019-04-10 15:38:11,862 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:38:21,865 - INFO - 64 : memory usage 799731712
+2019-04-10 15:38:21,868 - INFO - 64 : child memory usage 799731712
+2019-04-10 15:38:21,869 - INFO - 73 : cpu time 146.421875
+2019-04-10 15:38:21,923 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:38:31,930 - INFO - 64 : memory usage 799723520
+2019-04-10 15:38:31,932 - INFO - 64 : child memory usage 799727616
+2019-04-10 15:38:31,951 - INFO - 73 : cpu time 146.71875
+2019-04-10 15:38:31,980 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:38:41,983 - INFO - 64 : memory usage 799707136
+2019-04-10 15:38:41,985 - INFO - 64 : child memory usage 799711232
+2019-04-10 15:38:42,002 - INFO - 73 : cpu time 147.046875
+2019-04-10 15:38:42,002 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:38:52,029 - INFO - 64 : memory usage 799739904
+2019-04-10 15:38:52,035 - INFO - 64 : child memory usage 799744000
+2019-04-10 15:38:52,036 - INFO - 73 : cpu time 147.1875
+2019-04-10 15:38:52,121 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:39:02,152 - INFO - 64 : memory usage 799748096
+2019-04-10 15:39:02,154 - INFO - 64 : child memory usage 799752192
+2019-04-10 15:39:02,155 - INFO - 73 : cpu time 147.6875
+2019-04-10 15:39:02,156 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:39:12,173 - INFO - 64 : memory usage 799694848
+2019-04-10 15:39:12,178 - INFO - 64 : child memory usage 799698944
+2019-04-10 15:39:12,215 - INFO - 73 : cpu time 148.03125
+2019-04-10 15:39:12,263 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:39:22,266 - INFO - 64 : memory usage 799703040
+2019-04-10 15:39:22,272 - INFO - 64 : child memory usage 799707136
+2019-04-10 15:39:22,318 - INFO - 73 : cpu time 148.453125
+2019-04-10 15:39:22,376 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:39:32,382 - INFO - 64 : memory usage 799703040
+2019-04-10 15:39:32,387 - INFO - 64 : child memory usage 799703040
+2019-04-10 15:39:32,431 - INFO - 73 : cpu time 148.90625
+2019-04-10 15:39:32,478 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:39:42,487 - INFO - 64 : memory usage 799711232
+2019-04-10 15:39:42,492 - INFO - 64 : child memory usage 799711232
+2019-04-10 15:39:42,537 - INFO - 73 : cpu time 149.25
+2019-04-10 15:39:42,585 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:39:52,601 - INFO - 64 : memory usage 799698944
+2019-04-10 15:39:52,606 - INFO - 64 : child memory usage 799698944
+2019-04-10 15:39:52,656 - INFO - 73 : cpu time 149.640625
+2019-04-10 15:39:52,717 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:40:02,723 - INFO - 64 : memory usage 799698944
+2019-04-10 15:40:02,728 - INFO - 64 : child memory usage 799698944
+2019-04-10 15:40:02,770 - INFO - 73 : cpu time 149.984375
+2019-04-10 15:40:02,814 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:40:12,830 - INFO - 64 : memory usage 799690752
+2019-04-10 15:40:12,835 - INFO - 64 : child memory usage 799694848
+2019-04-10 15:40:12,836 - INFO - 73 : cpu time 150.4375
+2019-04-10 15:40:12,877 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:40:22,930 - INFO - 64 : memory usage 799690752
+2019-04-10 15:40:22,934 - INFO - 64 : child memory usage 799694848
+2019-04-10 15:40:22,936 - INFO - 73 : cpu time 150.703125
+2019-04-10 15:40:22,938 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:40:32,987 - INFO - 64 : memory usage 799686656
+2019-04-10 15:40:32,993 - INFO - 64 : child memory usage 799690752
+2019-04-10 15:40:33,057 - INFO - 73 : cpu time 151.078125
+2019-04-10 15:40:33,111 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:40:43,113 - INFO - 64 : memory usage 799678464
+2019-04-10 15:40:43,123 - INFO - 64 : child memory usage 799678464
+2019-04-10 15:40:43,197 - INFO - 73 : cpu time 151.59375
+2019-04-10 15:40:43,280 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:40:53,304 - INFO - 64 : memory usage 799674368
+2019-04-10 15:40:53,309 - INFO - 64 : child memory usage 799678464
+2019-04-10 15:40:53,391 - INFO - 73 : cpu time 152.15625
+2019-04-10 15:40:53,392 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:41:03,418 - INFO - 64 : memory usage 799678464
+2019-04-10 15:41:03,429 - INFO - 64 : child memory usage 799682560
+2019-04-10 15:41:03,494 - INFO - 73 : cpu time 152.53125
+2019-04-10 15:41:03,606 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:41:13,624 - INFO - 64 : memory usage 799551488
+2019-04-10 15:41:13,626 - INFO - 64 : child memory usage 799551488
+2019-04-10 15:41:13,644 - INFO - 73 : cpu time 153.0
+2019-04-10 15:41:13,672 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:41:23,675 - INFO - 64 : memory usage 799551488
+2019-04-10 15:41:23,680 - INFO - 64 : child memory usage 799555584
+2019-04-10 15:41:23,715 - INFO - 73 : cpu time 153.421875
+2019-04-10 15:41:23,745 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:41:33,747 - INFO - 64 : memory usage 799551488
+2019-04-10 15:41:33,754 - INFO - 64 : child memory usage 799555584
+2019-04-10 15:41:33,803 - INFO - 73 : cpu time 153.765625
+2019-04-10 15:41:33,861 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:41:43,883 - INFO - 64 : memory usage 799555584
+2019-04-10 15:41:43,889 - INFO - 64 : child memory usage 799559680
+2019-04-10 15:41:43,891 - INFO - 73 : cpu time 154.28125
+2019-04-10 15:41:43,935 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:41:53,939 - INFO - 64 : memory usage 799559680
+2019-04-10 15:41:53,944 - INFO - 64 : child memory usage 799563776
+2019-04-10 15:41:54,026 - INFO - 73 : cpu time 154.515625
+2019-04-10 15:41:54,112 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:42:04,119 - INFO - 64 : memory usage 799567872
+2019-04-10 15:42:04,125 - INFO - 64 : child memory usage 799571968
+2019-04-10 15:42:04,171 - INFO - 73 : cpu time 154.96875
+2019-04-10 15:42:04,212 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:42:14,221 - INFO - 64 : memory usage 799563776
+2019-04-10 15:42:14,227 - INFO - 64 : child memory usage 799567872
+2019-04-10 15:42:14,272 - INFO - 73 : cpu time 155.328125
+2019-04-10 15:42:14,325 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:42:24,329 - INFO - 64 : memory usage 799563776
+2019-04-10 15:42:24,334 - INFO - 64 : child memory usage 799567872
+2019-04-10 15:42:24,378 - INFO - 73 : cpu time 155.6875
+2019-04-10 15:42:24,432 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:42:34,434 - INFO - 64 : memory usage 799563776
+2019-04-10 15:42:34,436 - INFO - 64 : child memory usage 799567872
+2019-04-10 15:42:34,452 - INFO - 73 : cpu time 156.09375
+2019-04-10 15:42:34,478 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:42:44,480 - INFO - 64 : memory usage 799543296
+2019-04-10 15:42:44,485 - INFO - 64 : child memory usage 799547392
+2019-04-10 15:42:44,528 - INFO - 73 : cpu time 156.390625
+2019-04-10 15:42:44,572 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:42:54,589 - INFO - 64 : memory usage 799547392
+2019-04-10 15:42:54,594 - INFO - 64 : child memory usage 799551488
+2019-04-10 15:42:54,643 - INFO - 73 : cpu time 156.703125
+2019-04-10 15:42:54,680 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:43:04,711 - INFO - 64 : memory usage 799547392
+2019-04-10 15:43:04,716 - INFO - 64 : child memory usage 799551488
+2019-04-10 15:43:04,798 - INFO - 73 : cpu time 157.171875
+2019-04-10 15:43:04,799 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:43:14,802 - INFO - 64 : memory usage 799543296
+2019-04-10 15:43:14,807 - INFO - 64 : child memory usage 799543296
+2019-04-10 15:43:14,851 - INFO - 73 : cpu time 157.53125
+2019-04-10 15:43:14,895 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:43:24,910 - INFO - 64 : memory usage 799539200
+2019-04-10 15:43:24,915 - INFO - 64 : child memory usage 799543296
+2019-04-10 15:43:24,958 - INFO - 73 : cpu time 157.71875
+2019-04-10 15:43:25,015 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:43:35,020 - INFO - 64 : memory usage 799547392
+2019-04-10 15:43:35,026 - INFO - 64 : child memory usage 799547392
+2019-04-10 15:43:35,028 - INFO - 73 : cpu time 158.0
+2019-04-10 15:43:35,096 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:43:45,106 - INFO - 64 : memory usage 799555584
+2019-04-10 15:43:45,111 - INFO - 64 : child memory usage 799555584
+2019-04-10 15:43:45,156 - INFO - 73 : cpu time 158.390625
+2019-04-10 15:43:45,192 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:43:55,202 - INFO - 64 : memory usage 799551488
+2019-04-10 15:43:55,208 - INFO - 64 : child memory usage 799555584
+2019-04-10 15:43:55,256 - INFO - 73 : cpu time 158.71875
+2019-04-10 15:43:55,302 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:44:05,310 - INFO - 64 : memory usage 799555584
+2019-04-10 15:44:05,315 - INFO - 64 : child memory usage 799559680
+2019-04-10 15:44:05,361 - INFO - 73 : cpu time 158.921875
+2019-04-10 15:44:05,392 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:44:15,400 - INFO - 64 : memory usage 750624768
+2019-04-10 15:44:15,405 - INFO - 64 : child memory usage 750628864
+2019-04-10 15:44:15,407 - INFO - 73 : cpu time 159.25
+2019-04-10 15:44:15,485 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:44:25,513 - INFO - 64 : memory usage 750624768
+2019-04-10 15:44:25,519 - INFO - 64 : child memory usage 750628864
+2019-04-10 15:44:25,566 - INFO - 73 : cpu time 159.59375
+2019-04-10 15:44:25,584 - INFO - 73 : child cpu time 0.0
+2019-04-10 15:44:35,598 - INFO - 64 : memory usage 750505984
+2019-04-10 15:44:35,602 - INFO - 64 : child memory usage 750510080
+2019-04-10 15:44:35,604 - INFO - 73 : cpu time 160.046875
+2019-04-10 15:44:35,675 - INFO - 73 : child cpu time 0.0
